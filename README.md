@@ -1,7 +1,7 @@
 # Content Management Systems
-## I have zero idea what i am doing here_
+## I have zero idea what i am doing here
 
-[![SWU]]([https://cldup.com/dTxpPi9lDf.thumb.png](https://www.swu.bg/)
+[![SWU]][https://cldup.com/dTxpPi9lDf.thumb.png](https://www.swu.bg/)
 
 
 
