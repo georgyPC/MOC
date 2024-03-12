@@ -1,18 +1,17 @@
 # Content Management Systems
-## I have zero idea what i am doing here
+## _I have zero idea what i am doing here_
 
-[![SWU]][https://cldup.com/dTxpPi9lDf.thumb.png](https://www.swu.bg/)
+[![SWU][(https://cldup.com/dTxpPi9lDf.thumb.png)](https://www.swu.bg/)]
 
+My name is Georgi Chemishanov, I study in SWU, Blagoevgrad as of today. My fac.no is 21251421035 in IST. 
 
+## Cybersecurity 
+In this current repo, i will be addressing the things we have been doing in my course of Computer security
 
-## Features
+- We are currently working on getting used to Markdown
+- Also, we are veing let know about our personal footprint on the internet
 
-- Import a HTML file and watch it magically convert to Markdown
-- Drag and drop images (requires your Dropbox account be linked)
-- Import and save files from GitHub, Dropbox, Google Drive and One Drive
-- Drag and drop markdown and HTML files into Dillinger
-- Export documents as Markdown, HTML and PDF
-
+The following text is copied from Dillinger.io : 
 Markdown is a lightweight markup language based on the formatting conventions
 that people naturally use in email.
 As [John Gruber] writes on the [Markdown site][df1]
