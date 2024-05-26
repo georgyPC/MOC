@@ -1,184 +1,89 @@
-# Content Management Systems
-## _I have zero idea what i am doing here_
+# Топ 10 Най-Използвани Команди в Терминала на Windows за Компютърни Инженери по Сигурност
 
-[![SWU][(https://cldup.com/dTxpPi9lDf.thumb.png)](https://www.swu.bg/)]
+## 1. `ipconfig`
 
-My name is Georgi Chemishanov, I study in SWU, Blagoevgrad as of today. My fac.no is 21251421035 in IST. 
+`ipconfig` е основна команда за диагностика на мрежата, която показва текущата конфигурация на IP адресите на устройството. Чрез `ipconfig /all` можете да видите подробна информация за мрежовите адаптери, включително MAC адреси, DHCP статус и DNS сървъри.
 
-## Cybersecurity 
-In this current repo, i will be addressing the things we have been doing in my course of Computer security
+Някои от най-често използваните тагове включват:
+- `/all`: Показва цялата подробна конфигурация.
+- `/release` и `/renew`: Освобождава и подновява IP адреса от DHCP сървъра.
+- `/flushdns`: Изчиства кеша на DNS резолюциите.
 
-- We are currently working on getting used to Markdown
-- Also, we are veing let know about our personal footprint on the internet
+## 2. `netstat`
 
-The following text is copied from Dillinger.io : 
-Markdown is a lightweight markup language based on the formatting conventions
-that people naturally use in email.
-As [John Gruber] writes on the [Markdown site][df1]
+`netstat` е инструмент за наблюдение на мрежовите връзки, които устройството е установило, включително входящи и изходящи връзки. Той е полезен за идентифициране на активни връзки и диагностика на мрежови проблеми.
 
-> The overriding design goal for Markdown's
-> formatting syntax is to make it as readable
-> as possible. The idea is that a
-> Markdown-formatted document should be
-> publishable as-is, as plain text, without
-> looking like it's been marked up with tags
-> or formatting instructions.
+Популярни тагове включват:
+- `-a`: Показва всички активни връзки и слушащи портове.
+- `-b`: Показва програмите, които използват връзките.
+- `-n`: Показва адресите и портовете числено, без да ги резолвира.
 
-This text you see here is *actually- written in Markdown! To get a feel
-for Markdown's syntax, type some text into the left window and
-watch the results in the right.
+## 3. `ping`
 
-## Tech
+`ping` се използва за тестване на връзката до определен IP адрес или домейн. Тази команда изпраща ICMP Echo Request пакети и очаква отговор, като измерва времето за реакция.
 
-Dillinger uses a number of open source projects to work properly:
+Важни тагове включват:
+- `-t`: Изпраща пакети до прекъсване от потребителя.
+- `-n count`: Определя броя на изпратените пакети.
+- `-l size`: Определя размера на изпратените пакети.
 
-- [AngularJS] - HTML enhanced for web apps!
-- [Ace Editor] - awesome web-based text editor
-- [markdown-it] - Markdown parser done right. Fast and easy to extend.
-- [Twitter Bootstrap] - great UI boilerplate for modern web apps
-- [node.js] - evented I/O for the backend
-- [Express] - fast node.js network app framework [@tjholowaychuk]
-- [Gulp] - the streaming build system
-- [Breakdance](https://breakdance.github.io/breakdance/) - HTML
-to Markdown converter
-- [jQuery] - duh
+## 4. `tracert`
 
-And of course Dillinger itself is open source with a [public repository][dill]
- on GitHub.
+`tracert` проследява маршрута до определен IP адрес или домейн, показвайки всяка междинна спирка. Това е полезно за идентифициране на точки на мрежови забавяния или прекъсвания.
 
-## Installation
+Някои от важните тагове включват:
+- `-d`: Предотвратява резолюцията на IP адресите към имена.
+- `-h max_hops`: Определя максималния брой хопове за проследяване.
 
-Dillinger requires [Node.js](https://nodejs.org/) v10+ to run.
+## 5. `nslookup`
 
-Install the dependencies and devDependencies and start the server.
+`nslookup` е инструмент за диагностика на DNS, който помага за резолюция на домейни към IP адреси и обратно. Той е полезен за проверка на DNS записи и сървъри.
 
-```sh
-cd dillinger
-npm i
-node app
-```
+Основни тагове:
+- `server NAME`: Определя DNS сървъра, който да се използва за запитването.
+- `type=TYPE`: Определя типа на запитването (A, MX, TXT и т.н.).
 
-For production environments...
+## 6. `netsh`
 
-```sh
-npm install --production
-NODE_ENV=production node app
-```
+`netsh` е мощен инструмент за конфигурация на мрежови настройки и диагностика. Той позволява промени в конфигурацията на мрежовите интерфейси, защитните стени и други мрежови настройки.
 
-## Plugins
+Популярни тагове включват:
+- `interface ip set address`: Променя IP конфигурацията на мрежов интерфейс.
+- `firewall show state`: Показва текущото състояние на защитната стена.
+- `wlan show profiles`: Показва наличните WLAN профили.
 
-Dillinger is currently extended with the following plugins.
-Instructions on how to use them in your own application are linked below.
+## 7. `tasklist`
 
-| Plugin | README |
-| ------ | ------ |
-| Dropbox | [plugins/dropbox/README.md][PlDb] |
-| GitHub | [plugins/github/README.md][PlGh] |
-| Google Drive | [plugins/googledrive/README.md][PlGd] |
-| OneDrive | [plugins/onedrive/README.md][PlOd] |
-| Medium | [plugins/medium/README.md][PlMe] |
-| Google Analytics | [plugins/googleanalytics/README.md][PlGa] |
+`tasklist` показва списък на текущо изпълняващите се процеси на системата. Тази команда е полезна за наблюдение и управление на процесите.
 
-## Development
+Често използвани тагове:
+- `/svc`: Показва услугите, свързани с всеки процес.
+- `/fi filter`: Приложение на филтри за показване на специфични процеси.
+- `/m [module]`: Показва процесите, които използват даден модул.
 
-Want to contribute? Great!
+## 8. `taskkill`
 
-Dillinger uses Gulp + Webpack for fast developing.
-Make a change in your file and instantaneously see your updates!
+`taskkill` се използва за прекратяване на процеси по PID или име на изображение. Той е полезен за управление на процесите и освобождаване на системни ресурси.
 
-Open your favorite Terminal and run these commands.
+Основни тагове:
+- `/pid PID`: Прекратява процеса с указания PID.
+- `/im ImageName`: Прекратява процесите с указания име на изображение.
+- `/f`: Форсира прекратяването на процесите.
 
-First Tab:
+## 9. `sc`
 
-```sh
-node app
-```
+`sc` (Service Control) е инструмент за управление на Windows услуги. Тази команда позволява създаване, конфигурация, старт, спиране и изтриване на услуги.
 
-Second Tab:
+Често използвани тагове:
+- `create`: Създава нова услуга.
+- `start` и `stop`: Стартира и спира услуги.
+- `query`: Показва информация за състоянието на услугите.
 
-```sh
-gulp watch
-```
+## 10. `cipher`
 
-(optional) Third:
+`cipher` се използва за управление на криптиране на файлове и директории на NTFS дялове. Той е полезен за осигуряване на конфиденциалност на данните.
 
-```sh
-karma test
-```
-
-#### Building for source
-
-For production release:
-
-```sh
-gulp build --prod
-```
-
-Generating pre-built zip archives for distribution:
-
-```sh
-gulp build dist --prod
-```
-
-## Docker
-
-Dillinger is very easy to install and deploy in a Docker container.
-
-By default, the Docker will expose port 8080, so change this within the
-Dockerfile if necessary. When ready, simply use the Dockerfile to
-build the image.
-
-```sh
-cd dillinger
-docker build -t <youruser>/dillinger:${package.json.version} .
-```
-
-This will create the dillinger image and pull in the necessary dependencies.
-Be sure to swap out `${package.json.version}` with the actual
-version of Dillinger.
-
-Once done, run the Docker image and map the port to whatever you wish on
-your host. In this example, we simply map port 8000 of the host to
-port 8080 of the Docker (or whatever port was exposed in the Dockerfile):
-
-```sh
-docker run -d -p 8000:8080 --restart=always --cap-add=SYS_ADMIN --name=dillinger <youruser>/dillinger:${package.json.version}
-```
-
-> Note: `--capt-add=SYS-ADMIN` is required for PDF rendering.
-
-Verify the deployment by navigating to your server address in
-your preferred browser.
-
-```sh
-127.0.0.1:8000
-```
-
-## License
-
-MIT
-
-**Free Software, Hell Yeah!**
-
-[//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
-
-   [dill]: <https://github.com/joemccann/dillinger>
-   [git-repo-url]: <https://github.com/joemccann/dillinger.git>
-   [john gruber]: <http://daringfireball.net>
-   [df1]: <http://daringfireball.net/projects/markdown/>
-   [markdown-it]: <https://github.com/markdown-it/markdown-it>
-   [Ace Editor]: <http://ace.ajax.org>
-   [node.js]: <http://nodejs.org>
-   [Twitter Bootstrap]: <http://twitter.github.com/bootstrap/>
-   [jQuery]: <http://jquery.com>
-   [@tjholowaychuk]: <http://twitter.com/tjholowaychuk>
-   [express]: <http://expressjs.com>
-   [AngularJS]: <http://angularjs.org>
-   [Gulp]: <http://gulpjs.com>
-
-   [PlDb]: <https://github.com/joemccann/dillinger/tree/master/plugins/dropbox/README.md>
-   [PlGh]: <https://github.com/joemccann/dillinger/tree/master/plugins/github/README.md>
-   [PlGd]: <https://github.com/joemccann/dillinger/tree/master/plugins/googledrive/README.md>
-   [PlOd]: <https://github.com/joemccann/dillinger/tree/master/plugins/onedrive/README.md>
-   [PlMe]: <https://github.com/joemccann/dillinger/tree/master/plugins/medium/README.md>
-   [PlGa]: <https://github.com/RahulHP/dillinger/blob/master/plugins/googleanalytics/README.md>
+Основни тагове включват:
+- `/e`: Криптира указаните файлове и директории.
+- `/d`: Декриптира указаните файлове и директории.
+- `/w`: Изтрива безвъзвратно данни от диска, като презаписва свободното пространство.
